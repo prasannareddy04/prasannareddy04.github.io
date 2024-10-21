@@ -1,0 +1,69 @@
+
+        
+        :root {
+            --bg-gradient: linear-gradient(to right, lightblue, #c2cbd1); 
+            --text-color: black;
+            --primary-color: #1e3a8a; 
+            --seat-available: rgb(0, 127, 0);
+            --seat-booked: red;
+            --footer-color: rgb(221, 23, 56);
+        }
+
+                [data-theme="dark"] {
+            --bg-gradient: linear-gradient(to top, #1a1a2e, #16213e);
+            --text-color: #ffffff;
+            --primary-color: #00aaff; 
+            --seat-available: #00ff00; 
+            --seat-booked: #ff3333; 
+            --footer-color: pink;
+        }
+
+        body {
+            
+            background-image: var(--bg-gradient);
+            background-size: cover;
+            color: var(--text-color);
+            transition: background-image 0.3s, color 0.3s;
+        }
+
+        .seat { 
+            width: 50px; 
+            height: 50px; 
+            margin: 5px;
+            font-size: 20px;
+            
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+         
+            transition: background-color 0.3s, transform 0.3s; 
+        }
+        
+        .available { 
+            background-color: var(--seat-available); 
+        }
+
+        .booked { 
+            background-color: var(--seat-booked); 
+            cursor: not-allowed;
+        }
+
+        .available:hover {
+            background-color: rgba(0, 127, 0, 0.8); 
+            transform: scale(1.05); 
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--footer-color);
+        }
+        #bookBtn,#resetBtn {
+            color: white; background-color: black; padding: 4px; width: 100px;
+        }
+        #bookBtn:hover,#resetBtn:hover {
+        transform: scale(1.05);
+        transition-duration: 0.3s;
+    }
+        
+   
